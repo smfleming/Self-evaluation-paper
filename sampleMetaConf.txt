@@ -1,0 +1,22 @@
+# Dual route confidence model
+
+model {
+
+  # Top-level parameters
+  flipd ~ dbern(0.5)
+  d <- ifelse(flipd > 0, 1, -1)
+
+  x ~ dnorm(d, lambda)
+  x1 ~ dnorm(x, lambda1)
+  x2 ~ dnorm(x, lambda2)
+ 
+  # Action
+  pr_a <- ifelse(x1 > 0, 0.9999, 0.0001)
+  a ~ dbern(pr_a)
+
+  # Noise parameters
+  lambda <- 1/pow(sigma, 2)
+  lambda1 <- 1/pow(sigma1, 2)
+  lambda2 <- 1/pow(sigma2, 2)
+
+}
