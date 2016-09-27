@@ -2,7 +2,7 @@
 Code for paper "Self-evaluation of decision-making: A general Bayesian framework for metacognitive computation"
 Fleming & Daw Psychological Review (in press)
 
-This repo contains code used for the simulations in the paper. A preprint can be found here:
+This repo contains code used for the simulations in the paper. A preprint can be found here: http://metacoglab.org/s/FlemingDaw_selfEvaluation.pdf
 
 **Scripts to reproduce figures**
 
