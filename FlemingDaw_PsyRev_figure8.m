@@ -9,7 +9,7 @@ close all
 
 addpath('~/Dropbox/Utils/graphics/export_fig/');
 addpath('~/Dropbox/Utils/meta_d/');
-figDir = '~/Dropbox/Research/Metacognition/BN_model/selfSelf/figures/';
+figDir = '~/Dropbox/Research/Metacognition/BN_model/Self-evaluation-paper/figures/';
 
 savePlots = 0;
 

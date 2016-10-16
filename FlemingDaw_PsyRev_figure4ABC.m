@@ -8,7 +8,7 @@ close all
 
 savePlots = 1;
 addpath(genpath('~/Dropbox/Utils/graphics/'));
-figDir = '~/Dropbox/Research/metacognition/BN_model/main/figures/';
+figDir = '~/Dropbox/Research/Metacognition/BN_model/Self-evaluation-paper/figures/';
 
 %% First-order model confidence
 base = linspace(-1, 1, 500);

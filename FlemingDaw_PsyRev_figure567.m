@@ -5,9 +5,9 @@
 clear all
 close all
 
-savePlots = 1;
+savePlots = 0;
 addpath('~/Dropbox/Utils/graphics/export_fig/');
-figDir = '~/Dropbox/Research/Metacognition/BN_model/selfSelf/figures/';
+figDir = '~/Dropbox/Research/Metacognition/BN_model/Self-evaluation-paper/figures/';
 N = 10000; % trials per coherence level
 
 %% Effect of action on p(dhat=1|Xconf,a) as function of Xconf, second-order
@@ -31,7 +31,7 @@ plot(xp_vec, pD_L, 'k--', 'LineWidth', 2);
 plot(xp_vec, pD_R, 'k', 'LineWidth', 2);
 set(gca, 'YLim', [0 1], 'FontSize', 20);
 xlabel('X_{conf}', 'FontSize', 20);
-ylabel('p(d = R)','FontSize', 20);
+ylabel('p(d = 1)','FontSize', 20);
 legend({'a=?','a=L','a=R'}, 'Location', 'NorthWest')
 legend boxoff
 box off
@@ -75,7 +75,7 @@ plot(sigma_conf_vec, pD_L, 'k--', 'LineWidth', 2);
 plot(sigma_conf_vec, pD_R, 'k', 'LineWidth', 2);
 set(gca, 'YLim', [0 1], 'FontSize', 20);
 xlabel('\sigma_{conf}','FontSize', 20);
-ylabel('p(d = R)','FontSize', 20);
+ylabel('p(d = 1)','FontSize', 20);
 legend({'a=?','a=L','a=R'}, 'Location', 'NorthWest')
 legend boxoff
 box off
@@ -135,7 +135,7 @@ plot(rho_vec, pD_L, 'k--', 'LineWidth', 2);
 plot(rho_vec, pD_R, 'k', 'LineWidth', 2);
 set(gca, 'YLim', [0 1], 'FontSize', 20);
 xlabel('\rho','FontSize', 20);
-ylabel('p(d = R)','FontSize', 20);
+ylabel('p(d = 1)','FontSize', 20);
 legend({'a=?','a=L','a=R'}, 'Location', 'NorthEast')
 legend boxoff
 box off
@@ -351,6 +351,10 @@ end
 
 % variable rho
 rho_vec = linspace(0.1,0.9,10);
+theta = 1;
+rho = 0.6;
+sigma_act = 1;
+sigma_conf = 1;
 clear bias_rateChoose bias_chooseRate resolution_rateChoose resolution_chooseRate
 for sigmai = 1:length(rho_vec)
     meta_cor_rateChoose = nan(length(theta), N);

@@ -7,7 +7,7 @@ clear all
 close all
 
 addpath('~/Dropbox/Utils/graphics/export_fig/');
-figDir = '~/Dropbox/Research/Metacognition/BN_model/selfSelf/figures/';
+figDir = '~/Dropbox/Research/Metacognition/BN_model/Self-evaluation-paper/figures/';
 savePlots = 1;
 
 %% Simulate X-pattern from first- and second-order models
@@ -105,7 +105,7 @@ plot(mean_cor_conf, 'g', 'LineWidth', 3);
 hold on
 plot(mean_err_conf, 'r', 'LineWidth', 3);
 set(gca, 'FontSize', 18, 'XTick', [1 2 3], 'XTickLabel', {'Low', 'Med', 'High'}, 'XLim', [0.5 3.5], 'YLim', [0.5 1]);
-xlabel('X_{act}', 'FontSize', 20);
+xlabel('X_{conf}', 'FontSize', 20);
 ylabel('Confidence', 'FontSize', 20);
 box off
 if savePlots

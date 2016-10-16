@@ -14,9 +14,9 @@ clear all
 close all
 
 addpath('~/Dropbox/Utils/matjags/')
-figDir = '~/Dropbox/Research/Metacognition/BN_model/selfSelf/figures/';
+figDir = '~/Dropbox/Research/Metacognition/BN_model/Self-evaluation-paper/figures/';
 
-savePlots = 0;
+savePlots = 1;
 
 action = 1;
 xp = -0.6;

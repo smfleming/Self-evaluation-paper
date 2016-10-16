@@ -4,7 +4,7 @@
 % Fig 2A, B, C
 
 addpath('~/Dropbox/Utils/graphics/export_fig/')
-figDir = '~/Dropbox/Research/Metacognition/BN_model/selfSelf/figures/';
+figDir = '~/Dropbox/Research/Metacognition/BN_model/Self-evaluation-paper/figures/';
 
 % how many points
 nsamp = 500;
