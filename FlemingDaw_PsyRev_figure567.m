@@ -49,7 +49,7 @@ for sigmai = 1:length(sigma_conf_vec)
     
     sigma_conf = sigma_conf_vec(sigmai);
     
-    % Pre-action confidence is equivalent to max of first-order conf
+    % Compute first-order model for comparison
     mean_cor_pre(sigmai) = max([computeFirstOrderConf(xp, -1, sigma_act), computeFirstOrderConf(xp, 1, sigma_act)]);
     pD_pre(sigmai) = computeFirstOrderConf(xp, 1, sigma_act);
     
@@ -109,7 +109,7 @@ for sigmai = 1:length(rho_vec)
     
     rho = rho_vec(sigmai);
     
-    % Pre-action confidence is max of first-order conf
+    % Simulate first-order confidence for comparison
     mean_cor_pre(sigmai) = max([computeFirstOrderConf(xp, -1, sigma_act), computeFirstOrderConf(xp, 1, sigma_act)]);
     pD_pre(sigmai) = computeFirstOrderConf(xp, 1, sigma_act);
     
